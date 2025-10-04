@@ -23,7 +23,6 @@ const cartSlice = createSlice({
           name: product.name,
           images: product.images,
           price: product.price,
-          image: product.image,
           qty,
           subtotal: product.price * qty,
         });

@@ -20,8 +20,7 @@ const navigation = [
     roles: ["admin", "cashier"],
   },
   { name: "Products", href: "/products", icon: Package, roles: ["admin"] },
-  { name: "Reports", href: "/reports", icon: BarChart3, roles: ["admin"] },
-  { name: "User", href: "/user", icon: User, roles: ["admin"]}
+  { name: "User", href: "/users", icon: User, roles: ["admin"]}
 ];
 
 export default function Sidebar({ collapsed, onCollapsedChange }) {

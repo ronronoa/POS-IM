@@ -16,7 +16,6 @@ export default function Cart() {
   const taxAmount = useSelector(selectTaxAmount)
   const grandTotal = useSelector(selectGrandTotal)
 
-  const [showCheckout, setShowCheckout] = useState(false)
   return (
     <>
         <Card classname="h-full flex flex-col">
@@ -41,7 +40,7 @@ export default function Cart() {
                   <div className="flex items-center gap-3 p-3 border rounded-lg" key={item.id}>
                     <div className="w-12 h-12 bg-muted rounded flex items-center justify-center">
                       {/* <span className="text-xs font-medium">{item.name.slice(0, 2)}</span> */}
-                      <img src={`http://localhost:5000${item.image}`} alt={item.name.slice(0,2)} />
+                      <img src={item.images} alt={item.name.slice(0,2)} />
                     </div>
 
                     <div className="flex-1 min-w-0">
@@ -115,7 +114,6 @@ export default function Cart() {
                 <div className="flex gap-2 mt-4">
                   <button
                   className="flex items-center px-4 py-2 border rounded shadow bg-[#0F172A] text-white disabled:opacity-50 cursor-pointer"
-                  onClick={() => setShowCheckout(true)}
                   disabled={items.length === 0}
                   >
                     <Receipt size={18} className='mr-2'/>
@@ -138,14 +136,14 @@ export default function Cart() {
           </CardContent>
         </Card>
 
-        <CheckoutDialog 
+        {/* <CheckoutDialog 
           open={showCheckout}
           onOpenChange={setShowCheckout}
           onComplete={() => {
             setShowCheckout(false)
             dispatch(clearCart())
           }}
-        />
+        /> */}
     </>
   )
 }

@@ -1,10 +1,8 @@
 import React from 'react'
 import ProductView from '../components/pos/ProductView'
 
-export default function () {
+export default function Product() {
   return (
-    <div>
-      <ProductView />
-    </div>
+    <div><ProductView /></div>
   )
 }

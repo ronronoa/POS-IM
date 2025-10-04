@@ -31,6 +31,14 @@ export default function Dashboard() {
   }, []);
   return (
     <>
+      <div className="space-y-6">
+        <div className="flex items-center p-2 md:p-4 rounded-md border">
+          <h2 className="text-lg md:text-3xl font-bold">
+            Dashboard
+          </h2>
+        </div>
+      </div>
+
       <StatCard>
         <StatCardItem
           icon={<User className="text-blue-500" />}
@@ -44,16 +52,16 @@ export default function Dashboard() {
             { name: "Fri", value: 2 },
           ]}
         />
-        <StatCardItem icon={<ShoppingBag />} text="Total Sales" value="1,524" />
+        <StatCardItem icon={<ShoppingBag />} text="Total Sales" value="0" />
         <StatCardItem
           icon={<Box />}
           text="Total Product"
           value={stats.totalProducts}
           chartData={[
-            { name: "Jan", value: 982},
-            { name: "Feb", value: 1200},
-            { name: "March", value: 1892},
-            { name: "Apr", value: 1652},
+            { name: "Jan", value: 982 },
+            { name: "Feb", value: 1200 },
+            { name: "March", value: 1892 },
+            { name: "Apr", value: 1652 },
           ]}
         />
         <StatCardItem
@@ -61,10 +69,10 @@ export default function Dashboard() {
           text="Total Revenue"
           value={stats.totalRevenue}
           chartData={[
-            { name: "Jan", value: 982},
-            { name: "Feb", value: 1200},
-            { name: "March", value: 1892},
-            { name: "Apr", value: 1652},
+            { name: "Jan", value: 982 },
+            { name: "Feb", value: 1200 },
+            { name: "March", value: 1892 },
+            { name: "Apr", value: 1652 },
           ]}
         />
       </StatCard>
